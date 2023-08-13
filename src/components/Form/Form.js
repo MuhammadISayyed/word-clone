@@ -1,16 +1,16 @@
-import { format } from "prettier";
-import React from "react";
+import { format } from 'prettier';
+import React from 'react';
 
-function Form() {
-  const [input, setInput] = React.useState("");
+function Form({ handleSubmitGuess }) {
+  const [input, setInput] = React.useState('');
 
   return (
     <form
       className="get-input-wrapper"
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(input);
-        setInput("");
+        handleSubmitGuess(input);
+        setInput('');
       }}
     >
       <label htmlFor="guess-input">Enter a guess: </label>
