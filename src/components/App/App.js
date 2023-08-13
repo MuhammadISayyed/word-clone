@@ -1,5 +1,6 @@
-import Game from '../Game';
-import Header from '../Header';
+import Game from "../Game";
+import Header from "../Header";
+import Form from "../Form";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <div className="game-wrapper">
         <Game />
+        <Form />
       </div>
     </div>
   );
