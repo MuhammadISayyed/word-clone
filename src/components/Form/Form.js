@@ -1,7 +1,7 @@
 import { format } from 'prettier';
 import React from 'react';
 
-function Form({ handleSubmitGuess }) {
+function Form({ gameStatus, handleSubmitGuess }) {
   const [input, setInput] = React.useState('');
 
   return (
@@ -15,6 +15,7 @@ function Form({ handleSubmitGuess }) {
     >
       <label htmlFor="guess-input">Enter a guess: </label>
       <input
+        disabled={gameStatus !== 'running'}
         id="guess-input"
         type="text"
         value={input}

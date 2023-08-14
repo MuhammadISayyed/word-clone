@@ -11,7 +11,7 @@ function Guess({ value, answer }) {
   const result = checkGuess(value, answer);
   return (
     <div className="guess-results">
-      <p class="guess">
+      <p className="guess">
         {range(5).map((num) => (
           <Cell
             key={num}
